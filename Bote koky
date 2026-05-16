@@ -1,0 +1,84 @@
+import { Client } from 'meowsab';
+import { group, access } from "./system/control.js";
+استورد UltraDB من "./system/UltraDB.js";
+import sub from './sub.js';
+
+/* =========== العميل ========== */
+const client = new Client({
+رقم الهاتف: '201063362628'، // رقم بوت النماذج
+: ["."، "/"، "!"]،
+fromMe: false،
+الملاك: [
+// المالك 1
+{ الاسم: "VA"، الغطاء: "201063362628@lid"، معرف الهوية: " 972569311531@s.whatsapp.net " },
+// المالك 2
+{ الاسم: "الإمام"، الغطاء: "201063362628@lid"، جيد: " 201144480436@s.whatsapp.net " },
+// المالك 3
+{ الاسم: "★.:محـ𓅇꙰᭄ــمد𝑀𝒐𝒽𝑎𝓂𝓂𝑒𝑑"، معرف الهوية: " 201033024135@s.whatsapp.net "، الغلاف: "50414477168824@lid" },
+// المالك 4
+{ name: "ط¹ظ…ظˆط±طھظٹ", jid: " 201063362628@s.whatsapp.net ", lip: "5166451392538@lid" }
+],
+الإعدادات: { noWelcome: false },
+مسار المفيد: './plugins'
+});
+
+client.onGroupEvent(group);
+client.onCommandAccess(access);
+
+/* =========== قاعدة البيانات ========== */
+إذا لم يكن الملف global.db موجودًا {
+global.db = new UltraDB();
+}
+
+/* =============== */
+const { config } = client;
+config.info = {
+nameBot: "â™، ‌™‹ً‌™ٹً‌™ˆً‌™‰ً‌™" ںژھم€ˆ", اسم
+القناة: "و‌گ•و‌گˆو‌گˆ7 ~ ‌گ‚و‌گ,و‌گڑو‌گ§و‌گ§و‌گ‍و‌گ¥ں•·ï¸ڈ),
+idChannel: "120363225356834044@newsletter"،
+عناوين URL: {
+repo: " https://github.com/deveni0/Pomni-AI "،
+api: " https://eam-api.web.id "،
+القناة: " https://whatsapp.com/channel/0029VaQim2bAu3aPsRVaDq3v "
+}،
+حقوق النشر: {
+الحزمة: 'ع¤ظ€ ظ€ VA ظ€ ظ€ط§'،
+المؤلف: 'VA'
+},
+الصور: [
+"https://i.pinimg.com/originals/11/26/97/11269786cdb625c60213212aa66273a9.png",
+"https://i.pinimg.com/originals/e2/21/20/e221203f319df949ee65585a657501a2.jpg",
+"https://i.pinimg.com/originals/bb/77/0f/bb770fad66a634a6b3bf93e9c00bf4e5.jpg"
+]
+};
+
+/* ============== */
+client.start();
+
+setTimeout(async () => {
+إذا كان (client.commandSystem) {
+العميل المستقبل
+}
+}, 2000);
+
+/* =========== مشاكل متعلقة ===========
+Process.on('uncaughtException', (e) => {
+إذا كانت الرسالة تتضمن عبارة "تجاوز الحد المسموح به" {}
+});
+
+process.on('unhandledRejection', (err) => {
+console.error('Unhandled Rejection:', err)
+});
+
+/*
+==============================================
+
+setInterval(() => {
+const Used =process.memoryUsage().rss / 1024 / 1024
+إذا (تم استخدام > 800) {
+console.log( ًں”„ ذاكرة البوت ممتلئة (${used.toFixed(1)}MB)، جارٍ إعادة التشغيل...)
+process.exit(1)
+}
+}, 300_000)
+
+*/
